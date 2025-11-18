@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+:root {
+  /* ### Primary */
+  --Green-200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: hsl(186, 15%, 59%);
+  --Grey-900-darker: hsl(187, 24%, 22%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--Green-200-lighter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+.success {
+  padding: 1rem;
+  background-color: var(--Grey-900-darker);
+  border-radius: 15px;
+  display: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 10px;
+  z-index: 1;
+}
+.success .logo {
+  display: flex;
+  gap: 0.5rem;
+}
+.success .logo h3 {
+  color: var(--White);
+}
+.success p {
+  color: var(--White);
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+form {
+  background-color: var(--White);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 15px;
+}
+form span {
+  color: var(--Green-600-medium);
+}
+.fname-lname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.fname {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.fname label {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+}
+.fname input {
+  min-height: 2rem;
+  width: 15rem;
+  border-radius: 7px;
+  border: 1px solid var(--Grey-500-medium);
+  padding: 0 0.6rem;
+  font-weight: 700;
+  color: var(--Grey-900-darker);
+}
+.fname input:focus {
+  border: 2px solid var(--Green-600-medium);
+  outline: none;
+}
+.fname input:hover {
+  cursor: pointer;
+  border: 2px solid var(--Green-600-medium);
+}
+.lname {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.lname label {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+}
+.lname input {
+  min-height: 2rem;
+  width: 15rem;
+  border-radius: 7px;
+  border: 1px solid var(--Grey-500-medium);
+  padding: 0 0.6rem;
+  font-weight: 700;
+  color: var(--Grey-900-darker);
+}
+.lname input:focus {
+  border: 2px solid var(--Green-600-medium);
+  outline: none;
+}
+.lname input:hover {
+  cursor: pointer;
+  border: 2px solid var(--Green-600-medium);
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.email label {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+}
+.email input {
+  min-height: 2rem;
+  min-width: 100%;
+  width: 15rem;
+  border-radius: 7px;
+  border: 1px solid var(--Grey-500-medium);
+  padding: 0 0.6rem;
+  font-weight: 700;
+  color: var(--Grey-900-darker);
+}
+.email input:focus {
+  border: 2px solid var(--Green-600-medium);
+  outline: none;
+}
+.email input:hover {
+  cursor: pointer;
+  border: 2px solid var(--Green-600-medium);
+}
+.rdo-grp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.rdo-grp label {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+}
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.radio1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 15rem;
+  border: 1px solid var(--Grey-500-medium);
+  border-radius: 7px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.radio1 span {
+  position: absolute;
+  top: 1;
+  left: 8.5px;
+  display: none;
+}
+.radio1 span img {
+  height: 0.8rem;
+  width: 100%;
+  border-radius: 2px;
+}
+.radio1:hover {
+  border: 1px solid var(--Green-600-medium);
+  cursor: pointer;
+  background-color: var(--Green-200-lighter);
+}
+.radio1 p {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+  font-weight: 600;
+}
+.radio2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 15rem;
+  border: 1px solid var(--Grey-500-medium);
+  border-radius: 7px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.radio2 span {
+  position: absolute;
+  top: 1;
+  left: 8px;
+  display: none;
+}
+.radio2 span img {
+  height: 0.8rem;
+  width: 100%;
+  border-radius: 2px;
+}
+.radio2:hover {
+  border: 1px solid var(--Green-600-medium);
+  cursor: pointer;
+  background-color: var(--Green-200-lighter);
+}
+.radio2 p {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+  font-weight: 600;
+}
+.radio1.active,
+.radio2.active {
+  border: 2px solid var(--Green-600-medium);
+  background-color: var(--Green-200-lighter);
+}
+.msg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.msg label {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+}
+.msg textarea {
+  border: 1px solid var(--Grey-500-medium);
+  border-radius: 7px;
+  padding: 0.5rem;
+  font-weight: 700;
+  color: var(--Grey-900-darker);
+}
+.msg textarea:hover {
+  border: 1px solid var(--Green-600-medium);
+  cursor: pointer;
+}
+.msg textarea:focus {
+  border: 1px solid var(--Green-600-medium);
+  outline: none;
+}
+.consent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.okay {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  position: relative;
+}
+
+.okay span {
+  position: absolute;
+  top: 1;
+  left: 1.5px;
+  display: none;
+}
+.okay span img {
+  height: 0.7rem;
+  width: 100%;
+  border-radius: 2px;
+}
+.okay p {
+  font-size: 0.8rem;
+  color: var(--Grey-900-darker);
+  font-weight: 600;
+}
+.btn-sub button {
+  padding: 0.5rem;
+  min-width: 100%;
+  border-radius: 7px;
+  border: none;
+  background-color: var(--Green-600-medium);
+  color: var(--White);
+  font-weight: 600;
+}
+.btn-sub button:hover {
+  background-color: hsl(169, 57%, 39%);
+  cursor: pointer;
+}
+#error-msg {
+  color: var(--Red);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.7rem;
+  display: none;
+}
+#error-msg1 {
+  color: var(--Red);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.7rem;
+  display: none;
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 1rem;
+    justify-content: flex-start;
+  }
+
+  form {
+    width: 100%;
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+
+  .fname-lname {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fname input,
+  .lname input {
+    width: 100%;
+  }
+
+  .email input {
+    width: 100%;
+  }
+
+  .radio {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .radio1,
+  .radio2 {
+    width: 100%;
+    min-width: auto;
+  }
+  .radio2 span {
+    top: 25%;
+    left: 2.5%;
+  }
+  .radio2 span img {
+    height: 0.9rem;
+  }
+  .radio1 span {
+    top: 25%;
+    left: 2.5%;
+  }
+  .radio1 span img {
+    height: 0.9rem;
+  }
+
+  .msg textarea {
+    width: 100%;
+    min-height: 120px;
+  }
+
+  .okay {
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .okay {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    position: relative;
+  }
+
+  .okay span {
+    position: absolute;
+    top: -1%;
+    left: 0%;
+    display: none;
+  }
+  .okay span img {
+    height: 0.81rem;
+    width: 100%;
+    border-radius: 2px;
+  }
+
+  .success {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .btn-sub button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}

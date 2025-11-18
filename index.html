@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        font-weight: 800;
+      }
+      .attribution a {
+        color: hsl(169, 82%, 27%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="success">
+      <div class="logo">
+        <img src="assets/images/icon-success-check.svg" alt="" />
+        <h3>Message Sent!</h3>
+      </div>
+      <p>
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </div>
+
+    <form id="formsmbt">
+      <h1>Contact Us</h1>
+
+      <section class="fname-lname">
+        <div class="fname">
+          <label for="text"> First Name <span>*</span> </label>
+          <input type="text" />
+          <small id="error-msg">This field is required</small>
+          <!--  -->
+        </div>
+        <div class="lname">
+          <label for="text">Last Name <span>*</span> </label>
+          <input type="text" />
+          <small id="error-msg">This field is required</small>
+          <!--  -->
+        </div>
+      </section>
+
+      <section class="email" id="mail">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="text" />
+        <small id="error-msg">This field is required</small>
+        <small id="error-msg1">Please enter a valid email address</small>
+      </section>
+
+      <section class="rdo-grp">
+        <label for="query">Query Type <span>*</span></label>
+        <div class="radio">
+          <div class="radio1">
+            <span
+              ><img src="assets/images/icon-radio-selected.svg" alt=""
+            /></span>
+            <input type="radio" name="query" value="general" />
+
+            <p>General Enquiry</p>
+          </div>
+          <div class="radio2">
+            <span
+              ><img src="assets/images/icon-radio-selected.svg" alt=""
+            /></span>
+            <input type="radio" name="query" value="general" />
+
+            <p>Support Request</p>
+          </div>
+        </div>
+        <small id="error-msg">Please select a query type</small>
+        <!--  -->
+      </section>
+
+      <section class="msg">
+        <label for="text">Message <span>*</span> </label>
+        <textarea id="message"></textarea>
+        <!--  -->
+        <small id="error-msg">This field is required</small>
+      </section>
+
+      <section class="consent">
+        <div class="okay">
+          <span
+            ><img
+              src="assets/images/icon-checkbox-check.svg"
+              alt="green checkbox"
+          /></span>
+          <input type="checkbox" />
+          <p>I consent to being contacted by the team <span>*</span></p>
+        </div>
+        <!-- To submit this form, please consent to being contacted -->
+        <small id="error-msg">
+          To submit this form, please consent to being contacted
+        </small>
+      </section>
+
+      <section class="btn-sub">
+        <button type="submit">Submit</button>
+      </section>
+    </form>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Sunag Arigala</a>.
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
